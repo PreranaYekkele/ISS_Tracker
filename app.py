@@ -4,9 +4,6 @@ import matplotlib.pyplot as plt
 import io, os, base64
 import requests
 
-# Rest of your code...
-
-
 
 app = Flask(__name__)
 
