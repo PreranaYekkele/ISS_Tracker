@@ -3,12 +3,12 @@ import json, turtle, urllib.request, time
 url = "http://api.open-notify.org/astros.json"
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
-print("Şu anda " + str(result["number"]) + " uzayda ki astronotlar:")
+print("Right now" + str(result["number"]) + " Astronaut in Space")
 print("")
 
 people = result["people"]
 for p in people:
-  print(p["name"] + " Gemide " + p["craft"])
+  print(p["name"] + " on board " + p["craft"])
 
 screen = turtle.Screen()
 screen.setup(720, 360)
@@ -34,8 +34,8 @@ while True:
   #x = location["longitude"]
     
   
-  print("\nX-Boylam: " +str(x))
-  print("Y-Enlem: " + str(y))
+  print(str(x))
+  print(str(y))
  
   
   iss.goto(x, y)
